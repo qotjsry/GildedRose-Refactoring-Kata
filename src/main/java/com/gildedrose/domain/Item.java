@@ -1,4 +1,4 @@
-package com.gildedrose;
+package com.gildedrose.domain;
 
 public class Item {
 
@@ -6,16 +6,16 @@ public class Item {
 
     public int sellIn;
 
-    public Quality quality;
+    public int quality;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
-        this.quality = new Quality(quality);
+        this.quality = quality;
     }
 
-   @Override
-   public String toString() {
+    @Override
+    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 }
