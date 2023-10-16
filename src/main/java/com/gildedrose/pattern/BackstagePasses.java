@@ -2,7 +2,7 @@ package com.gildedrose.pattern;
 
 import com.gildedrose.domain.Item;
 
-public class BackstagePasses extends AbstractItemUpdate {
+public class BackstagePasses implements ItemUpdate {
 
     @Override
     public void update(Item item) {
