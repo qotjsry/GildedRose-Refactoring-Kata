@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 import com.gildedrose.domain.Item;
+import com.gildedrose.pattern.ItemFactory;
 import com.gildedrose.usecase.GildedRose;
 
 public class TexttestFixture {

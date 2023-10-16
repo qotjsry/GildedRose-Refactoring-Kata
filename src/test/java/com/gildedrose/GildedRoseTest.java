@@ -1,13 +1,13 @@
 package com.gildedrose;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.gildedrose.domain.Item;
+import com.gildedrose.pattern.ItemFactory;
 import com.gildedrose.usecase.GildedRose;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
     private Item[] items;
@@ -32,7 +32,7 @@ class GildedRoseTest {
         @Test
         @DisplayName("1일 지날 때마다 sellIn과 quality가 1씩 감소한다.")
         public void normalItem_decrease() throws Exception {
-            setUp("normalItem",10,10);
+            setUp("default",10,10);
             app.updateQuality();
             assertThat(itemSellIn()).isEqualTo(9);
             assertThat(itemQuality()).isEqualTo(9);

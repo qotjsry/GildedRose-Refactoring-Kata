@@ -9,7 +9,7 @@ public abstract class AbstractItemUpdate implements ItemUpdate {
 
     public void updateQuality(Item item, int amount) {
         if(item.quality + amount < MAX_QUALITY || item.quality + amount > MIN_QUALITY) {
-            item.quality =+ amount;
+            item.quality += amount;
         }
         item.sellIn -= 1;
     }

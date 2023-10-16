@@ -11,7 +11,7 @@ public class BackstagePasses extends AbstractItemUpdate {
             amount = 1;
         } else if (item.sellIn > 5) {
             amount = 2;
-        } else if (item.sellIn >= 0) {
+        } else if (item.sellIn > 0) {
             amount = 3;
         } else {
             amount = -item.quality;
